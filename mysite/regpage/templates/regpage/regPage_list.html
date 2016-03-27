@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset="utf-8" ">
-	<title>English tests</title>
-</head>
-<body>
-  <link rel="stylesheet" type="text/css" href="web.css" /> 
-<div id = "title">
-<h1>English tests</h1>
-<form action="process.java" method="post">
-	<p><input type="text" placeholder = "Login" name="loginin" /></p>
-	<p><input type="password" placeholder = "Password" name="passwoedin" /></p>
-	<!--<p><input class="jam" type="submit" value="Log in"><input class="jam" type="submit" value="Registration"></p>-->
-	<p class="oth"><a name="login" class="butstyle" onclick="alert('ss')" onselectstart = "return false" onmousedown = "return false">log in</a>
-	<a name="registration" class="butstyle" onselectstart = "return false" onmousedown = "return false" onclick="openPinUp('block')">registration</a></p>
-</form>
-</div>
-<div id="divBack"></div>
+
+{% extends 'regpage/Base_Start_Page.html' %}
+{% block content %}
 <div id = "divPinUp">
 <h1>Registration</h1>
 	<form>
@@ -30,12 +14,4 @@
 						<a name="cancel" class="butstyle" onselectstart = "return false" onmousedown = "return false" onclick="openPinUp('none')">Cancel</a></p>
 	</form>
 </div>
-<script type="text/javascript">
-	function openPinUp(ind){
-		document.getElementById('divBack').style.display = ind;
-		document.getElementById('divPinUp').style.display = ind;
-	}
-</script>
-<p class="oth1">© Copyright 2016 English Tests</p>
-</body>
-</html>
+{% endblock content %}

@@ -1,5 +1,6 @@
 	body{
-		background-image: url(/home/vldtn/djangolib/mysite/regpage/templates/regpage/backgIMAGINE/bigbang.jpg);
+		background-image: url(/static/img/bigbang.jpg);
+		/*background-color: #33691E;*/
 		
 	}
 	/*идентификатор стилей эл-та div*/

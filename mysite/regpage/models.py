@@ -8,7 +8,11 @@ class regPage(models.Model):
 	password = models.CharField(max_length=18, blank = True)
 	email = models.EmailField('Email', blank = False)
 	phone_number = models.CharField('phoneNumber', max_length = 15)
+	creating_date = models.DateTimeField(blank=True, null=True)
 
+	def created_acc(self):
+		self.creating_date = timezone.now()
+		self.save()
 	def __str__(self):
-		print(fisName)
+		return self.fisName
 # Create your models here.
